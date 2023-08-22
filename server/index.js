@@ -30,6 +30,10 @@ mongoose.connect(process.env.MONGO_URL, {
     console.log(err.message);
   });
 
+app.get("/", (req, res) => {
+  res.send("Hello, world!");
+});
+
 
   const server = app.listen(process.env.PORT, () =>
   console.log(`Server started on ${process.env.PORT}`)
