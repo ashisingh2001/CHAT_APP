@@ -9,7 +9,7 @@ const app = express();
 require("dotenv").config();
 app.use(cors(
   {
-    origin:[""],
+    origin:["chat-app-frontend-sepia.vercel.app"],
     methods:["POST","GET"],
     credentials:true,
   }
