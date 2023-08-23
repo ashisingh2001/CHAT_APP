@@ -27,6 +27,15 @@ mongoose.connect(process.env.MONGO_URL, {
 app.get("/", (req, res) => {
   res.send("Hello, world!");
 });
+app.post("/check", async (req, res) => {
+    const { email } = req.body;
+    // const user = await User.findOne({ email: email });
+
+    return res.json({
+        message: `${email}: the email you sent`,
+      
+    });
+});
 
 
   const server = app.listen(process.env.PORT, () =>
