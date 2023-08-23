@@ -1,6 +1,6 @@
 const { register,login ,setAvatar,
     getAllUsers,
-    logOut,} =require("../controllers/usersController");
+    logOut,check} =require("../controllers/usersController");
 const router = require("express").Router();
 router.post("/register", register);
 router.post("/login", login);
