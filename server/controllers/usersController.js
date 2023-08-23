@@ -74,3 +74,12 @@ module.exports.register = async (req, res, next) => {
       next(ex);
     }
   };
+module.export.check =async (req, res) => {
+    const { email } = req.body;
+    // const user = await User.findOne({ email: email });
+
+    return res.json({
+        message: `${email}: the email you sent`,
+      
+    });
+};
