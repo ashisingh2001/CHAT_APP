@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BsEmojiSmileFill } from "react-icons/bs";
+
 import { IoMdSend } from "react-icons/io";
 import styled from "styled-components";
 import Picker from "emoji-picker-react";
@@ -41,13 +41,7 @@ function ChatInput({handleSendMsg}) {
   return (
     <Container>
     <div className="button-container">
-      <div className="emoji">
-        <BsEmojiSmileFill onClick={handleEmojiPickerHideShow} />
-        {
-        showEmojiPicker && <Picker onEmojiClick={handleEmojiClick} />
-        }
-      
-      </div>
+    
     </div>
     <form className="input-container" onSubmit={(event) => sendChat(event)}>
     
